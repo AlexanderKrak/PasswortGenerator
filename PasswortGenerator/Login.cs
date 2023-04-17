@@ -26,24 +26,26 @@ namespace PasswortGenerator
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM person WHERE username = '" + txtUserName.Text + "' AND password = '" + txtPassword.Text + "'";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            counter = Convert.ToInt32(dt.Rows.Count.ToString());
-            if(counter == 0)
-            {
-                MessageBox.Show("username and password does not match");
-            }
-            else 
-            {
-                this.Hide();
-                frmGenerator generator = new frmGenerator();
-                generator.Show();
-            }   
+            
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM person WHERE username = '" + txtUserName.Text + "' AND password = '" + txtPassword.Text + "'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                counter = Convert.ToInt32(dt.Rows.Count.ToString());
+                if (counter == 0)
+                {
+                    MessageBox.Show("username and password does not match");
+                }
+                else
+                {
+                    this.Hide();
+                    frmGenerator generator = new frmGenerator();
+                    generator.Show();
+                }
+            conn.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)

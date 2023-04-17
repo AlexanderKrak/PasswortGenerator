@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSignUp = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.signUpPasswordAgain = new System.Windows.Forms.TextBox();
             this.signUpPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -50,9 +50,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSignUp);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.signUpPasswordAgain);
             this.panel1.Controls.Add(this.signUpPassword);
             this.panel1.Controls.Add(this.signUpUserName);
             this.panel1.Location = new System.Drawing.Point(138, 57);
@@ -81,16 +82,17 @@
             this.btnSignUp.TabIndex = 3;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // textBox1
+            // signUpPasswordAgain
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(69, 185);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Password Again";
-            this.textBox1.Size = new System.Drawing.Size(352, 33);
-            this.textBox1.TabIndex = 2;
+            this.signUpPasswordAgain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.signUpPasswordAgain.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.signUpPasswordAgain.Location = new System.Drawing.Point(69, 185);
+            this.signUpPasswordAgain.Name = "signUpPasswordAgain";
+            this.signUpPasswordAgain.PlaceholderText = "Password Again";
+            this.signUpPasswordAgain.Size = new System.Drawing.Size(352, 33);
+            this.signUpPasswordAgain.TabIndex = 2;
             // 
             // signUpPassword
             // 
@@ -122,7 +124,7 @@
         private TextBox signUpUserName;
         private Panel panel1;
         private Button btnSignUp;
-        private TextBox textBox1;
+        private TextBox signUpPasswordAgain;
         private TextBox signUpPassword;
         private Label label1;
     }
