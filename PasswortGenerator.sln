@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswortGenerator", "PasswortGenerator\PasswortGenerator.csproj", "{B6D4FED0-58F7-4C2E-8FBB-83D8059A12C7}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PasswordGenerator", "C:\Users\Sanko\source\repos\PasswordGenerator\PasswordGenerator.sqlproj", "{AAE840B5-8527-48A4-8CFA-C123FC7E9322}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{B6D4FED0-58F7-4C2E-8FBB-83D8059A12C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6D4FED0-58F7-4C2E-8FBB-83D8059A12C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6D4FED0-58F7-4C2E-8FBB-83D8059A12C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE840B5-8527-48A4-8CFA-C123FC7E9322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE840B5-8527-48A4-8CFA-C123FC7E9322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE840B5-8527-48A4-8CFA-C123FC7E9322}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AAE840B5-8527-48A4-8CFA-C123FC7E9322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE840B5-8527-48A4-8CFA-C123FC7E9322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE840B5-8527-48A4-8CFA-C123FC7E9322}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

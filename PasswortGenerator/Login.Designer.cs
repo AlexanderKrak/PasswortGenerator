@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -40,9 +40,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btnSignUp);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Location = new System.Drawing.Point(103, 60);
@@ -50,16 +50,17 @@
             this.panel1.Size = new System.Drawing.Size(590, 276);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // btnSignUp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(211, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Sign Up";
+            this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.btnSignUp.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSignUp.Location = new System.Drawing.Point(209, 213);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(75, 30);
+            this.btnSignUp.TabIndex = 4;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // label1
             // 
@@ -71,17 +72,18 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Not Registered?";
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(112, 170);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(352, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.Red;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(112, 170);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(352, 36);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -113,6 +115,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmLogin";
             this.Text = "Password Generator";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -122,10 +125,10 @@
         #endregion
 
         private Panel panel1;
-        private Button button1;
+        private Button btnLogin;
         private TextBox txtPassword;
         private TextBox txtUserName;
-        private Label label2;
         private Label label1;
+        private Button btnSignUp;
     }
 }

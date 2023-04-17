@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PasswortGenerator
 {
-    public partial class frmSignUp : Form
+    public partial class frmGenerator : Form
     {
-        public frmSignUp()
+        public frmGenerator()
         {
             InitializeComponent();
         }
