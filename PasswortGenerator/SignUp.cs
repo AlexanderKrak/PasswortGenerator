@@ -52,6 +52,10 @@ namespace PasswortGenerator
                         cmd.CommandType = CommandType.Text;
                         cmd.CommandText = "INSERT INTO person (username, password, passwordagain) VALUES ('" + signUpUserName.Text + "', '" + signUpPassword.Text + "', '" + signUpPasswordAgain.Text + "')"; ;
                         cmd.ExecuteNonQuery();
+                        MessageBox.Show("You have successfully signed up.");
+                        this.Close();
+                        FrmLogin login = new FrmLogin();
+                        login.Show();
                     }
                     else
                     {
